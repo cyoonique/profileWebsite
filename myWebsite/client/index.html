@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/index.css" />
+    <title>Yoon's website</title>
+    
+</head>
+<body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
+    <div id="root">
+        <!-- top navbar -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top aos-init aos-animate" data-aos="fade-down">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <img id="logo" src="assets/sunflower-logo.png">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <!-- <span class="navbar-toggler-icon"></span>     -->
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span> 
+                  <span class="icon-bar"></span>              
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/#about">ABOUT</a></li>
+                  <li><a href="/#portfolio">PORTFOLIO</a></li>
+                  <li><a href="/#contact">CONTACT</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <!-- jumbo intro -->
+        <div id="intro" class="jumbotron aos-init aos-animate" data-aos="fade-up">
+          <h1>Hi, I am Yoon</h1>
+          <h2>I am a software Engineer</h2>
+          <audio controls autoplay>
+              <source src="./assets/isyou.mp3" type="audio/mp3">
+          </audio>
+        </div>
+    
+        <div id="about" class="light">
+            <div id="about-wrapper" class="aos-init aos-animate" data-aos="fade-up">
+                <div id="about-content" class="row">
+                    <h3 id="heading">ABOUT</h3>
+                    <section id="description" class="col-xs-10 col-sm-8 col-md-5 col-lg-7 aos-init aos-animate" data-aos="fade-up">
+                        <article>
+                            <p>Hi there! I'm Yoon, a Software Engineer and a contributor of an open-source project called Swell which is an endpoint testing tool for different streaming technologies including Server-Sent Events (SSE), WebSockets, GraphQL, and HTTP2, and we built support for gRPC testing on top of that platform.</p>
+                            <br>
+                            <p>I love contributing robust solutions to web products and features throughout their entire development lifecycles, creating immersive and engaging user interfaces with high quality, scalable backends.</p>
+                            <br>
+                            <p>Some technologies I work with:</p>
+                        </article>
+                        <div id="about-tech">
+                            <ul>
+                                <li><span class="bullet"></span>JavaScript</li>
+                                <li><span class="bullet"></span>React</li>
+                                <li><span class="bullet"></span>Redux</li>
+                                <li><span class="bullet"></span>Node/Express</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bullet"></span>Webpack</li>
+                                <li><span class="bullet"></span>SQL</li>
+                                <li><span class="bullet"></span>NoSQL</li>
+                                <li><span class="bullet"></span>REST API</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bullet"></span>HTML</li>
+                                <li><span class="bullet"></span>CSS/SCSS</li>
+                                <li><span class="bullet"></span>AWS</li>
+                                <li><span class="bullet"></span>JEST</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="col-xs-10 col-sm-7 col-md-5 col-lg-5 aos-init aos-animate" data-aos="fade-up">
+                        <img id="portrait" src="assets/yoon.jpg" data-aos="fade-up" data-aos-duration="1100" alt="portrait" class="aos-init aos-animate"> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="portfolio-container" class="dark">
+            <div id="portfolio">   
+                <h3>PORTFOLIO</h3>
+            </div>
+            <div id="projects-container">
+                <div class="project aos-init aos-animate" data-aos="fade-up">
+                    <div class="proj-img-container row"></div>
+                        <a href="http://www.getswell.io" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/swell.png" class="proj-image col-sm-10 col-md-6 col-lg-6" alt="logo">
+                        </a>
+                        <div class="proj-desc col-xs-6 col-sm-10 col-md-6 col-lg-6" >
+                            <div class="desc-top">
+                                <h4>Swell</h4>
+                                <p>API development tool that enables developers to test endpoints served over streaming technologies including Server-Sent Events (SSE), WebSockets, HTTP2, and GraphQL.</p>     
+                        </div>
+                        <div class="desc-bottom">
+                            <ul class="tech">
+                                <li>React</li>
+                                <li>Redux</li>
+                                <li>Node</li>
+                                <li>Electron</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project aos-init aos-animate" data-aos="fade-up">
+                    <div class="proj-img-container row"></div>
+                        <a href="https://github.com/Les-Quizerables/Trivianetix" class="github" target="__blank">
+                            <img src="assets/trivia.png" class="proj-image col-sm-10 col-md-6 col-lg-6" alt="logo">
+                        </a>
+                        <div class="proj-desc col-xs-6 col-sm-10 col-md-6 col-lg-6">
+                            <div class="desc-top">
+                                <h4>Trivianetix</h4>
+                                <p>Data analystics and visualization app with Trivia Game with multi-users communication. Users can see relational graphs of scores v.s. user demographics.</p>
+                            </div>
+                        <div class="desc-bottom">
+                            <ul class="tech">
+                                <li>SQL</li>
+                                <li>React</li>
+                                <li>Node</li>
+                                <li>D3.js</li>
+                                <li>socket.io</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project aos-init aos-animate" data-aos="fade-up">
+                    <div class="project-img-container row"></div>
+                    <a href="https://github.com/cyoonique/AdoptAPet" class="github" target="__blank">
+                        <img src="assets/paw.png" class="proj-image col-xs-6 col-sm-10 col-md-6 col-lg-6" alt="logo">
+                    </a>
+                    <div class="proj-desc col-xs-6 col-sm-10 col-md-6 col-lg-6">
+                        <div class="desc-top">
+                            <h4>AdoptAPet</h4>
+                            <p>Pet adopting app to help local animal shleter to find a responsible owner and a friend.</p>
+                        </div>
+                        <div class="desc-bottom">
+                            <ul class="tech">
+                                <li>React</li>
+                                <li>Redux</li>
+                                <li>React Hooks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="contact">
+            <div id="footer-wrapper">
+                <p>Connect with me!</p>
+                <div id="links">
+                    <a id="github-link" href="https://github.com/cyoonique" target="__blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a id="linkedin-link" href="https://www.linkedin.com/in/y-choi/" target="__blank">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a id="email-link" href="mailto:choi.yoon333@gmail.com?Subject=Hello!" target="__blank">
+                        <i class="fas fa-envelope fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <a id="back-to-top" title="Back to top" href="#"><i class="fas fa-arrow-up"></i></i></a>
+        <div id="copyright">
+            <span>© 2020 — Designed & Built by Yoon Choi</span>
+        </div>
+    </div>
+    <div id="app"></div>
+    <script src="./build/bundle.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 50,
+            throttleDelay: 99,
+            offset: 120,
+            delay: 0,
+            duration: 800,
+            easing: 'ease',
+            once: false,
+            mirror: false,
+            anchorPlacement: 'top-botton'
+        });
+    </script>
+
+</body>
+</html>
