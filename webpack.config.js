@@ -2,10 +2,18 @@ const path = require('path');
 //webpack.config.js file creates bundle.js file to be served in production environment
 module.exports = {
   entry: {
-    app: './client/index.js'
+    app: './src/index.js'
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/build/',
   },
   devtool: 'inline-source-map',
+  mode: 'development',
   devServer: {
+    host: '0.0.0.0',
+    port: 8080,
     contentBase: path.resolve(__dirname, 'build'),
     hot: true,
     publicPath: '/build/',
@@ -19,11 +27,6 @@ module.exports = {
     filename: 'bundle.js',
   },
   mode: process.env.NODE_ENV,
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/build/',
-  },
   module: {
     rules: [
       {
