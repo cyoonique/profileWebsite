@@ -2,46 +2,38 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// Importing routers
-
-// DB config here
-// const db = require()
 const PORT = 3000;
 const app = express();
 
-// Connecting to DB
-
-// BodyParser Middleware
+// Bodyparser Middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }))
 
-// serve static files
-app.use('/assets', express.static(path.join(__dirname, '../client/assets')));
-
-// app.use(express.static('assets'));
+// handle requests for static files
+app.use('/assets', express.static(path.join(__dirname, '../src/assets')));
 
 /**
  * define route handlers
  */
-//if production
+// within production environment, serve the frontend with bundle.js file
 if (process.env.NODE_ENV === 'production') {
-    // statically serve everything in the build folder on the route '/build'
-    app.use('/build', express.static(path.resolve(__dirname, '../build')));
-    // serve index.html on the route '/'
-    app.get('/', (req, res) => {
-      res.sendFile(path.resolve(__dirname, '../client/index.html'));
-    });
+  // statically serve everything in the build folder on the route '/build'
+  app.use('/build', express.static(path.resolve(__dirname, '../build')));
+  // serve index.html on the route '/'
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../src/index.html'));
+  });
 };
 
-// serve html page
-app.get('/',  (req, res)=>{
-    res.sendFile(path.join(__dirname, '../client/index.html'))
-})
+// respond with main app
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/index.html'))
+});
 
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) => res.sendStatus(404));
 
-// Global error handler
+// Global error-handler
 app.use((err, req, res, next) => {
     const defaultErr = {
       log: 'Express error handler caught unknown middleware error',

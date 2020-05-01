@@ -1,13 +1,13 @@
 version: '3'
 services:
   dev:
-    image: ykwebsite/mm-dev
-    container_name: "mm-dev-hot-2"
+    image: ykcwebsite/mm-dev
+    container_name: 'mm-dev-hot'
     ports:
       - "8080:8080"
-    volumes: 
+    volumes:
       - .:/usr/src/app
       - node_modules:/usr/src/app/node_modules
     command: npm run dev
-volumes: 
-  node_modules: {}
+volumes:
+  node_modules:
