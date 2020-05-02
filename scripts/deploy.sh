@@ -16,7 +16,7 @@ sed -i='' "s/<VERSION>/$TRAVIS_COMMIT/" Dockerrun.aws.json
 # Zip up our codebase, along with modified Dockerrun and our .ebextensions directory
 zip -r mm-prod-deploy.zip Dockerrun.aws.json .ebextensions
 # Upload zip file to s3 bucket
-aws s3 cp mm-prod-deploy.zip s3://elasticbeanstalk-us-west-1-845114594136/mm-prod-deploy.zip
+aws s3 cp mm-prod-deploy.zip s3://elasticbeanstalk-us-west-2-738382344852/mm-prod-deploy.zip
 # Create a new application version with new Dockerrun
 aws elasticbeanstalk create-application-version --application-name website --version-label $TRAVIS_COMMIT --source-bundle S3Bucket=$EB_BUCKET,S3Key=mm-prod-deploy.zip
 # Update environment to use new version number
