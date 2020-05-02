@@ -14,7 +14,7 @@ docker push 738382344852.dkr.ecr.us-west-2.amazonaws.com/website:$TRAVIS_COMMIT
 # Use the linux sed command to replace the text '<VERSION>' in our Dockerrun file with the Travis-CI SHA key
 sed -i='' "s/<VERSION>/$TRAVIS_COMMIT/" Dockerrun.aws.json
 # Zip up our codebase, along with modified Dockerrun and our .ebextensions directory
-zip -r website-prod-deploy.zip Dockerrun.aws.json .ebextensions
+zip -r mm-prod-deploy.zip Dockerrun.aws.json .ebextensions
 # Upload zip file to s3 bucket
 aws s3 cp mm-prod-deploy.zip s3://elasticbeanstalk-us-west-1-845114594136/mm-prod-deploy.zip
 # Create a new application version with new Dockerrun
