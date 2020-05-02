@@ -1,5 +1,4 @@
 const path = require('path');
-
 //webpack.config.js file creates bundle.js file to be served in production environment
 module.exports = {
   entry: {
